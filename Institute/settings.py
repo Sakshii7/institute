@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'student.apps.StudentConfig',
     'staff.apps.StaffConfig',
-    "bootstrap5",
+    "bootstrap3",
 
 ]
 
@@ -89,7 +89,6 @@ DATABASES = {
         #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         # }
     }
-
 }
 
 

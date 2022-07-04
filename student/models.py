@@ -9,10 +9,13 @@ class Student(models.Model):
     last_name = models.CharField(max_length=20)
     email = models.EmailField(max_length=30)
     roll_number = models.CharField(max_length=20)
-    date = models.DateTimeField('date published', auto_now_add=True)
+    date = models.DateTimeField('date published', null=True)
 
 
 class Course(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.CharField(max_length=50)
 
+
+class Test(models.Model):
+    date = models.DateTimeField('date')

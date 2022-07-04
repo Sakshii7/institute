@@ -6,13 +6,12 @@ from student.models import *
 class StudentForm(ModelForm):
     class Meta:
         model = Student
-        fields = "__all__"
+        fields = ["first_name", "last_name", "email", "roll_number"]
 
     def clean(self):
         super(StudentForm, self).clean()
 
         first_name = self.cleaned_data.get('first_name')
-        text = self.cleaned_data.get('text')
 
         if len(first_name) < 2:
             self._errors['first_name'] = self.error_class([
