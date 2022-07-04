@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block title %}
+<title>Institute</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+        <h2>Student Data</h2>
+             <form action="" method="post"><input type='hidden'/>
+             {%csrf_token %}
+                {% bootstrap_form form %}
+              <div class="form-group"><br>
+                <button type="submit" class="btn btn-default ">
+                  Submit
+                </button>
+                  </div>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
