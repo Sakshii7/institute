@@ -1,5 +1,4 @@
-{% load bootstrap3 %}
-<!--{% bootstrap_messages %}-->
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +16,8 @@
         <div class="col-md-4 col-md-offset-4">
         <h2>Add Staff Members</h2>
              <form action="" method="post"><input type='hidden'/>
-             {%csrf_token %}
-                {% bootstrap_form form %}
+             {% csrf_token %}
+                 {{form|crispy}}
               <div class="form-group"><br>
                 <button type="submit" class="btn btn-default ">
                   Submit

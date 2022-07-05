@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'student.apps.StudentConfig',
     'staff.apps.StaffConfig',
     "bootstrap3",
+    "crispy_forms",
 
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
