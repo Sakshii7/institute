@@ -25,8 +25,3 @@ class StudentAdmin(admin.ModelAdmin):
 admin.site.register(Student, StudentAdmin)
 
 
-class TestAdmin(admin.ModelAdmin):
-    list_display = ['date']
-
-
-admin.site.register(Test, TestAdmin)
